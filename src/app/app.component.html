@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <app-gamecontrol (timer) = "onTimer($event)"></app-gamecontrol>
+      </div>
+    </div>    
+      <div class="row">
+        <div class="col-xs-12">          
+          <app-odd *ngFor="let oddNumber of oddNumbers" [number] = "oddNumber"></app-odd>
+          <app-even *ngFor="let evenNumber of evenNumbers" [number] = "evenNumber"></app-even>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
